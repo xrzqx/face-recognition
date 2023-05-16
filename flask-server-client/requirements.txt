@@ -1,0 +1,6 @@
+flask
+mysql-connector-python
+opencv-python-headless
+tensorflow
+Pillow
+gdown>=3.10.1

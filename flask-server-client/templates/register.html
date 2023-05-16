@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+<form action="/register" method="post" enctype="multipart/form-data">
+    <br>Your name:
+    <input type="text" name="content" id="content">
+    <br>Select your face photo:
+    <br>
+    <input type=file name=file>
+    <br> Allowed Format '.png', '.jpg', '.jpeg'
+    <br>
+    <br>
+    <input type="submit" value="Submit">
+</form>
+{% endblock %}

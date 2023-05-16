@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+<form action="/recognition" method="post" enctype="multipart/form-data">
+    <br>Select your face photo:
+    <br>
+    <input type=file name=file>
+    <br> Allowed Format '.png', '.jpg', '.jpeg'
+    <br>
+    <br>
+    <input type="submit" value="Submit">
+</form>
+{% endblock %}
