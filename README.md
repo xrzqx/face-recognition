@@ -12,7 +12,7 @@ docker compose up
 
 Step 3: Open Browser <br>
 For register endpoint:
-[http://localhost:8081/register](http://localhost:5000/register)
+[http://localhost:5000/register](http://localhost:5000/register)
 
 For recognition endpoint:
-[http://localhost:8081/recognition](http://localhost:5000/recognition)
+[http://localhost:5000/recognition](http://localhost:5000/recognition)
