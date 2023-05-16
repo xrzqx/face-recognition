@@ -2,6 +2,19 @@ import tensorflow as tf
 import numpy as np
 import cv2
 
+import os
+import zipfile
+import gdown
+
+url="https://github.com/swghosh/DeepFace/releases/download/weights-vggface2-2d-aligned/VGGFace2_DeepFace_weights_val-0.9034.h5.zip"
+if os.path.isfile("VGGFace2_DeepFace_weights_val-0.9034.h5") != True:
+    print("VGGFace2_DeepFace_weights_val-0.9034.h5 will be downloaded...")
+    output = "VGGFace2_DeepFace_weights_val-0.9034.h5.zip"
+    gdown.download(url, output, quiet=False)
+    # unzip VGGFace2_DeepFace_weights_val-0.9034.h5.zip
+    with zipfile.ZipFile(output, "r") as zip_ref:
+        zip_ref.extractall(".")
+
 model = tf.keras.Sequential()
 model.add(tf.keras.layers.Convolution2D(32, (11, 11), activation='relu', name='C1', input_shape=(152, 152, 3)))
 model.add(tf.keras.layers.MaxPooling2D(pool_size=3, strides=2, padding='same', name='M2'))
